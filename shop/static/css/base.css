@@ -314,7 +314,9 @@ ul.errorlist {
 .recommendations.cart img {
     width:120px;
 }
-
+#id_payment_method {
+    margin-bottom: 0.1em;
+}
 /* braintree hosted fields */
 form div.field {
     font-size:13px;

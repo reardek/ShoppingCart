@@ -3,12 +3,14 @@ from shop.models import Product
 
 
 class Order(models.Model):
+    PAYMENT = (('cash', 'Cash'), ('credit_cart', 'Credit Cart'), ('bank_transfer', 'Bank Transfer'))
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
     address = models.CharField(max_length=250)
     postal_code = models.CharField(max_length=6)
     city = models.CharField(max_length=100)
+    payment_method = models.TextField(choices=PAYMENT, default='Cash')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)

@@ -3,12 +3,12 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>{% block title %}My shop{% endblock %}</title>
+        <title>{% block title %}Planszówki sklep{% endblock %}</title>
         <link href="{% static "css/base.css" %}" rel="stylesheet">
     </head>
     <body>
     <div id="header">
-        <a href="/" class="logo">My shop</a>
+        <a href="/" class="logo">Planszówki sklep</a>
     </div>
     <div id="subheader">
         <div class="cart">
@@ -20,7 +20,7 @@
                     {{ cart.get_total_price }}zł
                 </a>
             {% else %}
-            Your cart is empty.
+            Twój koszyk jest pusty
             {% endif %}
             {% endwith %}
         </div>
